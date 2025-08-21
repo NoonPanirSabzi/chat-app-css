@@ -1,0 +1,14 @@
+:root {
+  --color-site-bg: #FAFAFA;
+  --color-app-bg: #F5F3F7;
+  --color-recipient-txt: #9341C8;
+  --color-recipient-box: #EEE5F4;
+  --color-recipient-status: #D99EFF;  
+  --color-sender-txt: #6E5D7E;
+  --color-sender-box: #FFF;
+  --color-placeholder: #C5C9CC;
+  --color-heading: #3E2753;
+  --color-txt: #A39DA9;
+  --color-recipient-option-cirlce: #E472FF;
+  --gradient-primary: linear-gradient(170deg, #44FFA1, #8739FF)
+}
