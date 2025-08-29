@@ -1,11 +1,13 @@
 :root {
   --color-site-bg: #fafafa;
+  --color-mobile-box-shadow: rgba(62, 39, 83, 0.2512);
   --color-app-bg: #f5f3f7;
   --color-recipient-txt: #9341c8;
   --color-recipient-box: #eee5f4;
   --color-recipient-status: #d99eff;
   --color-sender-txt: #6e5d7e;
   --color-sender-box: #fff;
+  --color-sender-box-shadow: rgba(62, 39, 83, 0.0453);
   --color-placeholder: #c5c9cc;
   --color-heading: #3e2753;
   --color-txt: #a39da9;
@@ -32,6 +34,22 @@
   color: var(--color-recipient-status);
 }
 
+.app-main p:not(.recipient-option__price) {
+  font-size: 8px;
+  line-height: 11px;
+}
+
+.recipient-option__price {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 11px;
+}
+
+.send input[type="text"]::placeholder {
+  font-size: 11px;
+  color: var(--color-placeholder);
+}
+
 /* LAYOUT */
 body {
   background-color: var(--color-site-bg);
@@ -44,6 +62,7 @@ body {
   margin-inline: auto;
   border-radius: 30px;
   padding: 11px 9.5px;
+  box-shadow: 0 3px 60px -10px var(--color-mobile-box-shadow);
 }
 
 .app {
@@ -123,4 +142,113 @@ body {
   inline-size: 2px;
   block-size: 2px;
   background-color: var(--color-sender-box);
+}
+
+.app-main {
+  padding: 10px 7.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recipient-message {
+  max-inline-size: 128px;
+  padding: 6px 8px;
+  background-color: var(--color-recipient-box);
+  border-radius: 10px 10px 10px 4px;
+  color: var(--color-recipient-txt);
+}
+
+.sender-pic-gallery {
+  align-self: flex-end;
+  margin-top: 8px;
+  display: flex;
+  max-inline-size: 136px;
+  gap: 8px;
+}
+
+.sender-pic-gallery img {
+  max-inline-size: 40px;
+  border-radius: 8px;
+}
+
+.sender-message {
+  align-self: flex-end;
+  max-inline-size: 128px;
+  padding: 6px 8px;
+  background-color: var(--color-sender-box);
+  color: var(--color-sender-txt);
+  border-radius: 10px 10px 4px 10px;
+  box-shadow: 0 10px 5px -5px var(--color-sender-box-shadow);
+}
+
+.recipient-option {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  max-inline-size: 160px;
+  padding-block: 10px;
+  padding-inline: 8px 16px;
+  border-radius: 10px 10px 10px 4px;
+  color: var(--color-sender-box);
+  background: linear-gradient(79deg, #e844ff, #8739ff);
+}
+
+.recipient-option__circle {
+  inline-size: 12px;
+  block-size: 12px;
+  border: 1px solid var(--color-recipient-option-cirlce);
+  border-radius: 50%;
+}
+
+.recipient-option__price {
+  margin-inline-start: auto;
+}
+
+.send {
+  position: relative;
+  margin-top: 8px;
+  inline-size: 100%;
+}
+
+.send input {
+  all: unset;
+  box-sizing: border-box;
+  inline-size: 100%;
+  padding-block: 13px 10px;
+  padding-inline-start: 19px;
+  border-radius: 17px;
+  background-color: var(--color-sender-box);
+}
+
+.send-btn {
+  background-color: var(--color-heading);
+  inline-size: 24px;
+  block-size: 24px;
+  border-radius: 50%;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.send-btn div {
+  inline-size: 2px;
+  block-size: 6px;
+  background-color: var(--color-sender-box);
+  border-radius: 4px;
+}
+
+.send-btn__top {
+  transform: rotate(-45deg);
+  margin-bottom: -1.4px;
+}
+
+.send-btn__bot {
+  transform: rotate(45deg);
+  margin-top: -1.4px;
 }
