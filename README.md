@@ -14,11 +14,11 @@
 
 ### Screenshot and live site URL
 
-| Desktop                                    | Mobile                                   |
-| ------------------------------------------ | ---------------------------------------- |
-| ![desktop](/images/desktop-screenshot.png) | ![Mobile](/images/mobile-screenshot.png) |
+| Desktop                                         | Mobile                                        |
+| ----------------------------------------------- | --------------------------------------------- |
+| ![desktop](./screenshot/desktop-screenshot.png) | ![Mobile](./screenshot/mobile-screenshot.png) |
 
-[Live Site URL](Link)
+[Live Site URL](https://chat-ap-css.netlify.app/)
 
 ## My process
 
@@ -53,9 +53,9 @@
    In a row flex container with lots of horizontal space, the container will try to stretch and occupy all available width—even if child elements have fixed widths.
    One way to control this is:
 
-   * Give children a fixed width.
-   * Set the desired gap between them.
-   * Then set the container’s `inline-size` (or `width`) to `fit-content`.
+   - Give children a fixed width.
+   - Set the desired gap between them.
+   - Then set the container’s `inline-size` (or `width`) to `fit-content`.
 
 ## Author
 
